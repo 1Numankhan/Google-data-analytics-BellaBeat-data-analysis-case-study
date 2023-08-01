@@ -9,8 +9,8 @@ As a junior data analyst, I will be performing many real-world tasks.
 4. Analyze 
 5. Share 
 6. Act
-
-   # Background
+   
+# Background
    Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products.
 Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women
 around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower
@@ -26,7 +26,7 @@ the Google Display Network to support campaigns around key marketing dates.
 # Scenerio
 I am assuming to be a junior data analyst in the marketing analyst team at Bellabeat, a high-tech manufacturer of
 health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger
-player in the global smart device market. I will be analyzing the dataset to gain insight to help Bellabeat to be a world player for the smart devices market.
+player in the global smart device market. I will be analyzing the dataset to gain insight to help Bellabeat to be a world player in the smart devices market.
 
    
 # 1. ASK
@@ -36,5 +36,8 @@ Analyze the data in order to help Bellabeat guide marketing strategy and analyze
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
 3. How could these trends help influence Bellabeat's marketing strategy?
+
+# 2. PREPARE
+
 
 
