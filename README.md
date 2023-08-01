@@ -32,4 +32,9 @@ player in the global smart device market. I will be analyzing the dataset to gai
 # 1. ASK
 ### Business task: 
 Analyze the data in order to help Bellabeat guide marketing strategy and analyze their smart devices and how the customer used Bellabeat products and devices
+### ANALYSIS QUESTION
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat's marketing strategy?
+
 
