@@ -29,7 +29,7 @@ health-focused products for women. Bellabeat is a successful small company, but 
 player in the global smart device market. I will be analyzing the dataset to gain insight to help Bellabeat to be a world player for the smart devices market.
 
    
-# ASK
+# 1. ASK
 ### Business task: 
 Analyze the data in order to help Bellabeat guide marketing strategy and analyze their smart devices and how the customer used Bellabeat products and devices
 
