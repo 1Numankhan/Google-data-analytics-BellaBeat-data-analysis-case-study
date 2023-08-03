@@ -28,6 +28,11 @@ I am assuming to be a junior data analyst in the marketing analyst team at Bella
 health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger
 player in the global smart device market. I will be analyzing the dataset to gain insight to help Bellabeat to be a world player in the smart devices market.
 
+# Stakeholders
+Urška Sršen: Bellabeat’s co-founder and Chief Creative Officer
+Sando Mur: Mathematician and Bellabeat’s cofounder; a key member of the Bellabeat executive team
+Bellabeat marketing analytics team: I’m a member of this team.
+
    
 # 1. ASK
 ### Business task: 
@@ -38,6 +43,7 @@ Analyze the data in order to help Bellabeat guide marketing strategy and analyze
 3. How could these trends help influence Bellabeat's marketing strategy?
 
 # 2. PREPARE
+we will be using the <https://www.kaggle.com/arashnic/fitbit> for this case study which has a total of 18 datasets.
 
 
 
