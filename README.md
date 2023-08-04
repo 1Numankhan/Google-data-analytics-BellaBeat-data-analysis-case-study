@@ -45,7 +45,7 @@ Analyze the data in order to help Bellabeat guide marketing strategy and analyze
 # 2. PREPARE
 Data source: <https://www.kaggle.com/arashnic/fitbit> 
 we will be using them for this case study which has a total of 18 datasets.
-The data follow a ROC approach.
+The data follow a ROCCC approach.
 1. Reliable: data is clear, unbias and ready for analysis
 2. Original: The data is original from 30 FitBit users.
 3. Comprehensive: The data has all the pieces of information that we are looking for. the sample size is small which was recorded certain days of the week. some dataset has millions of rows.
