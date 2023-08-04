@@ -46,15 +46,18 @@ Analyze the data in order to help Bellabeat guide marketing strategy and analyze
 Data source: <https://www.kaggle.com/arashnic/fitbit> 
 we will be using them for this case study which has a total of 18 datasets.
 The data follow a ROC approach.
-1. Reliable: data is precise, unbias and ready for analysis
-2. Original: The data is original from 30 FitBit users.
+1. Reliable: data is not reliable, it only has 30 users.
+2. Original: The data is not  original. it is from a third-party provider(amazon mechanical Turk)
 3. Comprehensive: The data has all the pieces of information that we are looking for. The small sample size was recorded on certain days of the week. some dataset has millions of rows.
 4. Current: the is from March 2016 to May 2016 which is not current.
 5. Cited: citation is unknown.
 
 # Data preparation process
-** Power query in Excel to merge data.
-I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and hourly_calories and merged to create a new sheet hourly_activity.
+**Power query in Excel to merge data**
+I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and hourly_calories and merged them using power query to create a new sheet hourly_activity.
+**Remove Duplicates**
+   removed 542 duplicates from minute_sleep_merged.
+   
 
 
    
