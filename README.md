@@ -54,9 +54,12 @@ The data follow a ROC approach.
 
 # Data preparation process
 **Power query in Excel to merge data**
-I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and hourly_calories and merged them using power query to create a new sheet hourly_activity.
+I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and hourly_calories and merged them using power query to create a new sheet hourly_activity. <br>
+
 **Remove Duplicates**
-   removed 542 duplicates from minute_sleep_merged.
+
+  - removed 542 duplicates from minute_sleep_merged.
+  - removed 3 duplicates from the sleepDay_merged dataset which has 410 unique values.
    
 
 
