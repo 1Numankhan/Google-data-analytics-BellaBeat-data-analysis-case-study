@@ -52,6 +52,10 @@ The data follow a ROC approach.
 4. Current: the is from March 2016 to May 2016 which is not current.
 5. Cited: citation is unknown.
 
+
+# Prepare
+Excel is used to merge the various data set and clean it. especially the small data set. some dataset has millions of  rows which will be analyzed in Bigquery
+
 # Data preparation process
 **Power query in Excel to merge data**
 I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and hourly_calories and merged them using power query to create a new sheet hourly_activity. <br>
@@ -60,6 +64,10 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 
   - removed 542 duplicates from minute_sleep_merged.
   - removed 3 duplicates from the sleepDay_merged dataset which has 410 unique values.
+  - using the **split function** to organize the data in different columns, especially the data and time.
+
+   ## Data Exploration
+   for further data exploration  BigQuery will be used to find any inconsistencies in data.
    
 
 
