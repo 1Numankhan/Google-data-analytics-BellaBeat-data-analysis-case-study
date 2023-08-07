@@ -71,7 +71,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 
    ### Import and clean data on SQL using the big query
    There are some big dataset which has millions of row so it's impossible to work on the data in Excel.
-   The following datasets will be loaded into **bigQuery** which are, heartrate_seconds_merged, minuteCaloriesNarrow_merged, minuteIntensitiesNarrow_merged, minuteMETsNarrow_merged, and minuteStepsNarrow_merged when uploading the dataset to the bigquery I face some difficulties and error due inconsistencies in data and time which is a timestamp, this is due to the **auto-correct schema**. These  resources (kaggle)<https://www.kaggle.com/datasets/arashnic/fitbit/discussion/265899> help me in that regard.
+   The following datasets will be loaded into **bigQuery** which are, heartrate_seconds_merged, minuteCaloriesNarrow_merged, minuteIntensitiesNarrow_merged, minuteMETsNarrow_merged, and minuteStepsNarrow_merged when uploading the dataset to the bigquery I face some difficulties and error due inconsistencies in data and time which is a timestamp, this is due to the **auto-correct schema**. These  resources [kaggle](https://www.kaggle.com/datasets/arashnic/fitbit/discussion/265899) help me in that regard.
    
    
    
