@@ -68,6 +68,16 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 
    ## Data Exploration
    for further data exploration  BigQuery will be used to find any inconsistencies in data.
+
+   ### Import and clean data on SQL using the big query
+   There are some big dataset which has millions of row so it's impossible to work on the data in Excel.
+   The following datasets will be loaded into **bigQuery** which are, heartrate_seconds_merged, minuteCaloriesNarrow_merged, minuteIntensitiesNarrow_merged, minuteMETsNarrow_merged, and minuteStepsNarrow_merged when uploading the dataset to the bigquery I face some difficulties and error due inconsistencies in data and time which is a timestamp, this is due to the **auto-correct schema**. These  resources <kaggle>(https://www.kaggle.com/datasets/arashnic/fitbit/discussion/265899) help me in that regard.
+   
+   
+   
+   
+   ![carbon (1)](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/89742e0c-ba19-4b37-95b2-2ee121edb448)
+
    
 
 
