@@ -76,13 +76,15 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
    
    
    
-   ![carbon (1)](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/89742e0c-ba19-4b37-95b2-2ee121edb448)
+   ![carbon (1)](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/89742e0c-ba19-4b37-95b2-2ee121edb448)`<BR>
+
+
    
 
    #### Check unique users in the datasets
    
 
-   [Total_users_from_datasets.pdf](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/files/12300075/Total_users_from_datasets.pdf)
+
 
 
 
