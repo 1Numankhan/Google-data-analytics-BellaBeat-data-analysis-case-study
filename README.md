@@ -82,7 +82,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
    
 
    #### Check unique users in the datasets
-   after upload the datasets into **bigquery** I found all the individual users that participated. 
+   after uploading the datasets into **bigquery** I found all the individual users that participated. 
 
    | Data Set Name          | Format | Total Unique Users |
 |------------------------|--------|--------------------|
