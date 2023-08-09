@@ -77,6 +77,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
    
    
    ![carbon (1)](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/89742e0c-ba19-4b37-95b2-2ee121edb448)
+   
 
    #### Check unique users in the datasets
    
