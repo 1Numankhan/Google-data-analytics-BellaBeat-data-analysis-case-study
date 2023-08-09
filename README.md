@@ -82,6 +82,19 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
    
 
    #### Check unique users in the datasets
+   after upload the datasets into **bigquery** I found all the individual users that participated. 
+
+   | Data Set Name          | Format | Total Unique Users |
+|------------------------|--------|--------------------|
+| daily_activity_merged  | CSV    | 33                 |
+| heartrate_seconds_merged | CSV  | 33                 |
+| minuteMETSnarrow_merged | CSV   | 33                 |
+| minuteSleep_merged     | CSV    | 24                 |
+| sleepDay_merged        | CSV    | 24                 |
+| weightLogInfo_merged   | CSV    | 8                  |
+
+
+
    
 
 
