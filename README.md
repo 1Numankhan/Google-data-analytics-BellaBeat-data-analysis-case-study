@@ -3,12 +3,12 @@ This is a Google data analytics Bellabeat data analysis case study. assume that 
 As a junior data analyst, I will be performing many real-world tasks.
 ## This case study will follow the six data analysis processes. 
 
-1. Ask 
-2. Prepare
-3. Process
-4. Analyze 
-5. Share 
-6. Act
+- 1. Ask 
+- 2. Prepare
+- 3. Process
+- 4. Analyze 
+- 5. Share 
+- 6. Act
    
 # Background
    Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products.
@@ -81,7 +81,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 
    
 
-   #### Check unique users in the datasets
+   ## Check unique users in the datasets
    after uploading the datasets into **bigquery** I found all the individual users that participated. 
 
    | Data Set Name          | Format | Total Unique Users |
