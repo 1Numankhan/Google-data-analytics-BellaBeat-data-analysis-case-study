@@ -46,14 +46,19 @@ Analyze the data in order to help Bellabeat guide marketing strategy and analyze
 Data source: <https://www.kaggle.com/arashnic/fitbit> 
 we will be using them for this case study which has a total of 18 datasets.
 The data follow a ROC approach.
-1. Reliable: data is not reliable, it only has 30 users.
+1. Reliable: data is reliable, it only has 30 users and is vetted by different individuals in Medium and kaggle.
 2. Original: The data is not  original. it is from a third-party provider(amazon mechanical Turk)
 3. Comprehensive: The data has all the pieces of information that we are looking for. The small sample size was recorded on certain days of the week. some dataset has millions of rows.
 4. Current: the is from March 2016 to May 2016 which is not current.
 5. Cited: citation is unknown.
 
+# Data organization and storage
+There are 18 datasets in **FITBIT data**. every dataset represents different aspects of the Fitbit data. The data is long and wide and some dataset has Rows up to 2 million, I upload all the necessary datasets into **big query** under the project **bellabeat_case_study** with the dataset name **Fitbit_data.
 
-# Prepare
+![Uploading upload_dataset.png…]()
+
+
+# Process phase
 Excel is used to merge the various data set and clean it. especially the small data set. some dataset has millions of  rows which will be analyzed in Bigquery
 
 # Data preparation process
@@ -92,6 +97,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 | minuteSleep_merged     | CSV    | 24                 |
 | sleepDay_merged        | CSV    | 24                 |
 | weightLogInfo_merged   | CSV    | 8                  |
+
 
 
 
