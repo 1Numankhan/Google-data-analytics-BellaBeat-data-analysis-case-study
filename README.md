@@ -114,7 +114,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 | weightLogInfo_merged         | Merged weight log information                  |
 
 
-# #checking start and end of the date
+## checking start and end of the date
 checking starting and end of the date. This is the example of one table individual date set. I do it for all to check when the specific activity is started and ended.
 ## Querying Date Range Using SQL
 
@@ -128,8 +128,33 @@ FROM
   `bellabeat-case-study-395108.fitbit_data.daily_activity_merged`
 WHERE
   ActivityDate BETWEEN '2016-04-12' AND '2016-05-12';
+```
+## Count the time span for totals number of days
+I checked the total time span in days for the table 
+the following example showed the time span of the following activity in days. 
 
 
+## Time Span Analysis
+
+You can use SQL to analyze the time span for each table and calculate the number of days. The following example is just for the two table **daily_activity_meregd** and **minuteMETSNarrow_Merged**. Later I altered the the datatypes for this table.
+
+```sql
+-- `daily_activity_merged` Table
+SELECT
+    COUNT(distinct ActivityDate) AS number_of_days
+FROM `bellabeat-case-study-395108.fitbit_data.daily_activity_merged`;
+
+-- `minuteMETsNarrow_merged` Table
+SELECT
+    COUNT(DISTINCT ActivityMinute) AS num_Of_day
+FROM
+    `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_merged`;
+
+-- Convert minutes into days
+SELECT
+    COUNT(DISTINCT ActivityDateTime) / 1440.0 AS num_of_days
+FROM
+    `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_modified`;
 
    
 
