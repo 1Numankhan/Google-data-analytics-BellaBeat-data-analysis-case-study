@@ -98,6 +98,24 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 | sleepDay_merged        | CSV    | 24                 |
 | weightLogInfo_merged   | CSV    | 8                  |
 
+## uploaded datasets to big QUery
+| Dataset Name                | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| dailyCalories_merged         | Daily calorie information                       |
+| dailyIntensities             | Daily activity intensities                      |
+| dailySteps                   | Daily step count                                 |
+| daily_activity_merged        | Merged daily activity data                      |
+| heartrate_seconds_merged     | Merged heart rate data in seconds               |
+| hourlyCalories              | Hourly calorie information                      |
+| hourlyIntensities            | Hourly activity intensities                     |
+| hourlySteps                  | Hourly step count                                |
+| minuteMETsNarrow_merged      | Merged minute METs data (narrow)                |
+| minuteSleep_merged          | Merged minute-level sleep data                  |
+| sleepDay                    | Daily sleep information                         |
+| sleepDay_merged             | Merged daily sleep data                         |
+| weightLogInfo_merged         | Merged weight log information                  |
+
+
 
 
 
