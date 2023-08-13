@@ -53,12 +53,10 @@ The data follow a ROC approach.
 5. Cited: citation is unknown.
 
 # Data organization and storage
-There are 18 datasets in **FITBIT data**. every dataset represents different aspects of the Fitbit data. The data is long and wide and some dataset has Rows up to 2 million, I upload all the necessary datasets into **big query** under the project **bellabeat_case_study** with the dataset name **Fitbit_data.
-
-![Uploading upload_dataset.png…]()
+There are 18 datasets in **FITBIT data**. every dataset represents different aspects of the Fitbit data. The data is long and wide and some dataset has Rows up to 2 million, I upload all the necessary datasets into **big query** under the project **bellabeat_case_study** with the dataset name **Fi
 
 
-# Process phase
+# 3. Process phase
 Excel is used to merge the various data set and clean it. especially the small data set. some dataset has millions of  rows which will be analyzed in Bigquery
 
 # Data preparation process
@@ -116,6 +114,20 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 | weightLogInfo_merged         | Merged weight log information                  |
 
 
+# #checking start and end of the date
+checking starting and end of the date. This is the example of one table individual date set. I do it for all to check when the specific activity is started and ended.
+## Querying Date Range Using SQL
+
+You can use SQL to find the start and end dates within a specified date range. Here's an example using the `daily_activity_merged` table:
+
+```sql
+SELECT
+  MIN(ActivityDate) AS start_date,
+  MAX(ActivityDate) AS end_date
+FROM 
+  `bellabeat-case-study-395108.fitbit_data.daily_activity_merged`
+WHERE
+  ActivityDate BETWEEN '2016-04-12' AND '2016-05-12';
 
 
 
