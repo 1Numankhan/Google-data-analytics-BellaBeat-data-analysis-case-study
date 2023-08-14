@@ -155,9 +155,7 @@ SELECT
     COUNT(DISTINCT ActivityDateTime) / 1440.0 AS num_of_days
 FROM
     `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_modified`;
----
-
-
+```
 
 ## Checking Data Types
 
