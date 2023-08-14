@@ -115,7 +115,7 @@ I used MS Excel for a small dataset. like hourly_steps, hourly_intenseties, and 
 
 
 ## checking start and end of the date
-checking starting and end of the date. This is the example of one table individual date set. I do it for all to check when the specific activity is started and ended.
+checking starting and end of the date. This is the example of one table individual date set. I do it to check when the specific activity starts and ends.
 ## Querying Date Range Using SQL
 
 You can use SQL to find the start and end dates within a specified date range. Here's an example using the `daily_activity_merged` table:
@@ -155,12 +155,17 @@ SELECT
     COUNT(DISTINCT ActivityDateTime) / 1440.0 AS num_of_days
 FROM
     `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_modified`;
+---
 
-## checking datatypes
-some tables have the correct columns of datatype. These tables have the correct datatype of Timestamp like **daily_activity**, **daily_steps**, **daily_calories** and **daily_intensities**.
-Tables other than these, The columns that indicate a time is of string datatype this will be changed into a date.
-   The following example is just for one table.
-   ## Checking and Converting Data Type
+
+
+## Checking Data Types
+
+Some tables have the correct columns of datatype. These tables have the correct datatype of Timestamp like **daily_activity**, **daily_steps**, **daily_calories**, and **daily_intensities**.
+
+Tables other than these have columns that indicate a time as a string datatype; these will be changed into a date. Here's an example for one table:
+
+## Checking and Converting Data Type
 
 If a column that should represent a date is stored as a string, you can convert it to a date data type using SQL.
 
@@ -178,6 +183,8 @@ SELECT
     METs
 FROM 
     `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_merged`;
+
+
 
 
 
