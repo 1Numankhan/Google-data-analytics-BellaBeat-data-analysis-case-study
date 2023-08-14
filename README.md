@@ -53,7 +53,7 @@ The data follow a ROC approach.
 5. Cited: citation is unknown.
 
 # Data organization and storage
-There are 18 datasets in **FITBIT data**. every dataset represents different aspects of the Fitbit data. The data is long and wide and some dataset has Rows up to 2 million, I upload all the necessary datasets into **big query** under the project **bellabeat_case_study** with the dataset name **Fi
+There are 18 datasets in **FITBIT data**. every dataset represents different aspects of the Fitbit data. The data is long and wide and some dataset has Rows up to 2 million, I upload all the necessary datasets into **big query** under the project **bellabeat_case_study** with the dataset names.
 
 
 # 3. Process phase
@@ -136,7 +136,7 @@ the following example showed the time span of the following activity in days.
 
 ## Time Span Analysis
 
-You can use SQL to analyze the time span for each table and calculate the number of days. The following example is just for the two table **daily_activity_meregd** and **minuteMETSNarrow_Merged**. Later I altered the the datatypes for this table.
+You can use SQL to analyze the time span for each table and calculate the number of days. The following example is just for the two table **daily_activity_meregd** and **minuteMETSNarrow_Merged**. Later I altered the datatypes for this table.
 
 ```sql
 -- `daily_activity_merged` Table
@@ -156,7 +156,30 @@ SELECT
 FROM
     `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_modified`;
 
-   
+## checking datatypes
+some tables have the correct columns of datatype. These tables have the correct datatype of Timestamp like **daily_activity**, **daily_steps**, **daily_calories** and **daily_intensities**.
+Tables other than these, The columns that indicate a time is of string datatype this will be changed into a date.
+   The following example is just for one table.
+   ## Checking and Converting Data Type
+
+If a column that should represent a date is stored as a string, you can convert it to a date data type using SQL.
+
+### `minuteMETsNarrow_modified` Table
+
+In this example, we'll convert the `ActivityMinute` column from a string to a date data type and create a modified table `minuteMETsNarrow_modified`.
+
+```sql
+-- Create a modified table with the correct data type
+CREATE OR REPLACE TABLE `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_modified`
+AS
+SELECT 
+    Id,
+    PARSE_DATETIME("%m/%d/%Y %l:%M:%S %p", ActivityMinute) AS ActivityDateTime,
+    METs
+FROM 
+    `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_merged`;
+
+
 
 
 
