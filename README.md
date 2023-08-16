@@ -181,6 +181,38 @@ SELECT
     METs
 FROM 
     `bellabeat-case-study-395108.fitbit_data.minuteMETsNarrow_merged`;
+```
+## Remove Duplicates in BigQuery
+To remove Duplicated values I used Excel for that process. But I perform this operation in BigQuery to enhance my SQL skill. So as I already remove duplicates in Excel I found no duplicates in the tables.
+-- Daily_activity_merged
+```sql
+SELECT
+  Id,
+  ActivityDate,
+  Count(*) as num_of_ids
+FROM
+  `bellabeat-case-study-395108.fitbit_data.daily_activity_merged`
+GROUP BY
+  Id, ActivityDate
+HAVING
+  num_of_ids > 1;
+```
+for sleepday table, we found no duplicates in the data.
+
+```sql
+SELECT
+  Id,
+  SleepDay,
+  Count(*) as num_of_ids
+FROM
+  `bellabeat-case-study-395108.fitbit_data.sleepDay`
+GROUP BY
+  Id, SleepDay
+HAVING
+  num_of_ids > 1;
+```
+There is no data to display mean this no duplicates all are unique.
+
 
 
 
