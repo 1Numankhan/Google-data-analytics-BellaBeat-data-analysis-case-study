@@ -211,7 +211,26 @@ GROUP BY
 HAVING
   num_of_ids > 1;
 ```
-There is no data to display mean this no duplicates all are unique.
+There is no data to display meaning this no duplicates all are unique.
+
+## Checking Null Values in the Tables
+checked for the nulls values in the table but I can't find it.
+```sql
+-- daily_activity_merged
+SELECT * 
+FROM `bellabeat-case-study-395108.fitbit_data.daily_activity_merged` 
+WHERE Id IS NULL;
+
+--there is no data to display
+SELECT
+*
+FROM `bellabeat-case-study-395108.fitbit_data.sleepDay`
+WHERE Id is null;
+--there is no data to dislplay
+
+
+--there is no data to display
+```
 
 
 
