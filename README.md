@@ -276,55 +276,43 @@ dailyactivity %>%
          SedentaryMinutes, Calories) %>%
   summary()
 ```
- TotalSteps    TotalDistance    SedentaryMinutes
- Min.   :    0   Min.   : 0.000   Min.   :   0.0  
- 1st Qu.: 3790   1st Qu.: 2.620   1st Qu.: 729.8  
- Median : 7406   Median : 5.245   Median :1057.5  
- Mean   : 7638   Mean   : 5.490   Mean   : 991.2  
- 3rd Qu.:10727   3rd Qu.: 7.713   3rd Qu.:1229.5  
- Max.   :36019   Max.   :28.030   Max.   :1440.0  
-    Calories   
- Min.   :   0  
- 1st Qu.:1828  
- Median :2134  
- Mean   :2304  
+|               | Min.  | 1st Qu. | Median | Mean   | 3rd Qu. | Max.   |
+|:--------------|:------|:--------|:-------|:-------|:--------|:-------|
+| TotalSteps    | 0     | 3790    | 7406   | 7638   | 10727   | 36019  |
+| TotalDistance | 0.000 | 2.620   | 5.245  | 5.490  | 7.713   | 28.030 |
+| SedentaryMin. | 0.0   | 729.8   | 1057.5 | 991.2  | 1229.5  | 1440.0 |
+
 
  **daily activity**
-  VeryActiveMinutes FairlyActiveMinutes LightlyActiveMinutes
- Min.   :  0.00    Min.   :  0.00      Min.   :  0.0       
- 1st Qu.:  0.00    1st Qu.:  0.00      1st Qu.:127.0       
- Median :  4.00    Median :  6.00      Median :199.0       
- Mean   : 21.16    Mean   : 13.56      Mean   :192.8       
- 3rd Qu.: 32.00    3rd Qu.: 19.00      3rd Qu.:264.0       
- Max.   :210.00    Max.   :143.00      Max.   :518.0  
+|                    | Min.  | 1st Qu. | Median | Mean   | 3rd Qu. | Max.  |
+|:-------------------|:------|:--------|:-------|:-------|:--------|:------|
+| VeryActiveMinutes  | 0.00  | 0.00    | 4.00   | 21.16  | 32.00   | 210.00|
+| FairlyActiveMinutes| 0.00  | 0.00    | 6.00   | 13.56  | 19.00   | 143.00|
+| LightlyActiveMin. | 0.0   | 127.0   | 199.0  | 192.8  | 264.0   | 518.0 |
+
 
 **summary of hourlycalories**
-    Calories     
- Min.   : 42.00  
- 1st Qu.: 63.00  
- Median : 83.00  
- Mean   : 97.39  
- 3rd Qu.:108.00  
- Max.   :948.00  
+
+|         | Min. | 1st Qu. | Median | Mean | 3rd Qu. | Max.  |
+|:--------|:-----|:--------|:-------|:-----|:--------|:------|
+| Calories| 42.00| 63.00   | 83.00  | 97.39| 108.00  | 948.00|
+ 
 
  **summary of the sleepday**
-  TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
- Min.   :1.00      Min.   : 58.0      Min.   : 61.0  
- 1st Qu.:1.00      1st Qu.:361.0      1st Qu.:403.8  
- Median :1.00      Median :432.5      Median :463.0  
- Mean   :1.12      Mean   :419.2      Mean   :458.5  
- 3rd Qu.:1.00      3rd Qu.:490.0      3rd Qu.:526.0  
- Max.   :3.00      Max.   :796.0      Max.   :961.0  
+|                | Min. | 1st Qu. | Median | Mean | 3rd Qu. | Max. |
+|:---------------|:-----|:--------|:-------|:-----|:--------|:-----|
+| TotalSleepRec. | 1.00 | 1.00    | 1.00   | 1.12 | 1.00    | 3.00 |
+| TotalMinAsleep | 58.0 | 361.0   | 432.5  | 419.2| 490.0   | 796.0|
+| TotalTimeInBed | 61.0 | 403.8   | 463.0  | 458.5| 526.0   | 961.0|
+
 
  **summary of the weight**
 
-    WeightKg           BMI       
- Min.   : 52.60   Min.   :21.45  
- 1st Qu.: 61.40   1st Qu.:23.96  
- Median : 62.50   Median :24.39  
- Mean   : 72.04   Mean   :25.19  
- 3rd Qu.: 85.05   3rd Qu.:25.56  
- Max.   :133.50   Max.   :47.54  
+|      | Min. | 1st Qu. | Median | Mean  | 3rd Qu. | Max.  |
+|:-----|:-----|:--------|:-------|:------|:--------|:------|
+| WeightKg| 52.60| 61.40   | 62.50  | 72.04 | 85.05   | 133.50|
+| BMI    | 21.45| 23.96   | 24.39  | 25.19 | 25.56   | 47.54 |
+
 
 
    
