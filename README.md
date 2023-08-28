@@ -231,14 +231,100 @@ WHERE Id is null;
 
 --there is no data to display
 ```
+## ANALYZE
+This step from the data analysis process is done in RStudio Cloud for better statistical analysis and to enhance my **R programming** skill
+
+### **install and load libraries**
+```{r}
+install.packages('tidyverse')
+install.packages('ggplot2')
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
 
 
+## Attaching core tidyverse packages
+
+The following core tidyverse packages are attached:
+
+- dplyr 1.1.2
+- readr 2.1.4
+- forcats 1.0.0
+- stringr 1.5.0
+- ggplot2 3.4.3
+- tibble 3.2.1
+- lubridate 1.9.2
+- tidyr 1.3.0
+- purrr 1.0.2
 
 
+## Summaries of the datasets 
+
+let's have a look at the summary of the datasets. The following summary R script is just for one instance. I uploaded the R script file into the repository.
 
 
+**summary of dailyActivity**
 
+```{r}
+dailyactivity <- dailyActivity_merged
+dailyactivity %>%  
+  select(TotalSteps,
+         TotalDistance,
+         SedentaryMinutes, Calories) %>%
+  summary()
+```
+ TotalSteps    TotalDistance    SedentaryMinutes
+ Min.   :    0   Min.   : 0.000   Min.   :   0.0  
+ 1st Qu.: 3790   1st Qu.: 2.620   1st Qu.: 729.8  
+ Median : 7406   Median : 5.245   Median :1057.5  
+ Mean   : 7638   Mean   : 5.490   Mean   : 991.2  
+ 3rd Qu.:10727   3rd Qu.: 7.713   3rd Qu.:1229.5  
+ Max.   :36019   Max.   :28.030   Max.   :1440.0  
+    Calories   
+ Min.   :   0  
+ 1st Qu.:1828  
+ Median :2134  
+ Mean   :2304  
 
+ **daily activity**
+  VeryActiveMinutes FairlyActiveMinutes LightlyActiveMinutes
+ Min.   :  0.00    Min.   :  0.00      Min.   :  0.0       
+ 1st Qu.:  0.00    1st Qu.:  0.00      1st Qu.:127.0       
+ Median :  4.00    Median :  6.00      Median :199.0       
+ Mean   : 21.16    Mean   : 13.56      Mean   :192.8       
+ 3rd Qu.: 32.00    3rd Qu.: 19.00      3rd Qu.:264.0       
+ Max.   :210.00    Max.   :143.00      Max.   :518.0  
+
+**summary of hourlycalories**
+    Calories     
+ Min.   : 42.00  
+ 1st Qu.: 63.00  
+ Median : 83.00  
+ Mean   : 97.39  
+ 3rd Qu.:108.00  
+ Max.   :948.00  
+
+ **summary of the sleepday**
+  TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ Min.   :1.00      Min.   : 58.0      Min.   : 61.0  
+ 1st Qu.:1.00      1st Qu.:361.0      1st Qu.:403.8  
+ Median :1.00      Median :432.5      Median :463.0  
+ Mean   :1.12      Mean   :419.2      Mean   :458.5  
+ 3rd Qu.:1.00      3rd Qu.:490.0      3rd Qu.:526.0  
+ Max.   :3.00      Max.   :796.0      Max.   :961.0  
+
+ **summary of the weight**
+
+    WeightKg           BMI       
+ Min.   : 52.60   Min.   :21.45  
+ 1st Qu.: 61.40   1st Qu.:23.96  
+ Median : 62.50   Median :24.39  
+ Mean   : 72.04   Mean   :25.19  
+ 3rd Qu.: 85.05   3rd Qu.:25.56  
+ Max.   :133.50   Max.   :47.54  
 
 
    
