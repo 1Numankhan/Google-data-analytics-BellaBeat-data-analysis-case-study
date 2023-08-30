@@ -1,16 +1,17 @@
 # Google-data-analytics-BellaBeat-data-analysis-case-study
-This is a Google data analytics Bellabeat data analysis case study. assume that I will be working for Bellabeat as a junior data analyst.
+This is a Google data analytics Bellabeat data analysis case study assume that I will be working for Bellabeat as a junior data analyst.
 As a junior data analyst, I will be performing many real-world tasks.
 ## This case study will follow the six data analysis processes. 
 
-- 1. Ask 
-- 2. Prepare
-- 3. Process
-- 4. Analyze 
-- 5. Share 
-- 6. Act
+-  **Ask**
+-  **Prepare**
+-  **Process**
+-  **Analyze** 
+-   **Share**
+-   **Act**
+
    
-# Background
+# BackGround
    Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products.
 Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women
 around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower
@@ -306,17 +307,40 @@ dailyactivity %>%
 | TotalTimeInBed | 61.0 | 403.8   | 463.0  | 458.5| 526.0   | 961.0|
 
 
- **summary of the weight**
+ **Summary of the weight**
 
 |      | Min. | 1st Qu. | Median | Mean  | 3rd Qu. | Max.  |
 |:-----|:-----|:--------|:-------|:------|:--------|:------|
 | WeightKg| 52.60| 61.40   | 62.50  | 72.04 | 85.05   | 133.50|
 | BMI    | 21.45| 23.96   | 24.39  | 25.19 | 25.56   | 47.54 |
+## Summary Key finding 
+- On average each user takes 7638 per day. which is lower than recommended.
+- On average each user spends 991.2 min which is 16.52 hours on being inactive in the day which is approximately 68.83% of a day.
+- On average each user sleeps  419.2 min a day which  is 6.9866667 in hours.
+
+# Calculate the Average steps, Distance, and Calories Burned per day 
+```r
+dailyActivity_merged <- read.csv("/cloud/project/dailyActivity_merged.csv")
 
 
+average_summary <- dailyActivity_merged %>%
+  summarize(
+    AVGsteps = mean(TotalSteps),
+    AVGdistance = mean(TotalDistance),
+    AvgCalories = mean(Calories)
+  )
 
-   
-   
+# Assign the modified dataset back to the same variable
+dailyActivity_merged <- average_summary
+
+# Print the summary
+print(average_summary)
+
+```
+**Output**
+|     | AVGsteps | AVGdistance | AvgCalories |
+| --- | -------- | ----------- | ----------- |
+| 1   | 7637.911 | 5.489702    | 2303.61     |
 
 
 
