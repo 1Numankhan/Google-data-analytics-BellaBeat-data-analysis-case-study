@@ -343,6 +343,38 @@ print(average_summary)
 | 1   | 7637.911 | 5.489702    | 2303.61     |
 
 
+## user and their average sleep
+```{r}
+data <- read.csv("/cloud/project/sleepDay_merged.csv")
 
+data <- data %>%
+  group_by(Id) %>%
+  summarise(
+    no_sleep_days = n_distinct(Id),
+    daily_sleep_min = sum(TotalMinutesAsleep)
+  ) %>%
+  mutate(
+    avg_sleep_min = round(daily_sleep_min / no_sleep_days, 2),
+    sleep_type = case_when(
+      avg_sleep_min >= 540 ~ "Oversleeping",
+      avg_sleep_min >= 420 ~ "Healthy Sleep",
+      avg_sleep_min >= 210 ~ "Unhealthy Sleep",
+      TRUE ~ "Nap"
+    )
+  )
 
+result <- data %>%
+  group_by(sleep_type) %>%
+  summarise(
+    no_of_users = n()
+  )
 
+print(result)
+```
+| Sleep Type    | No. of Users |
+|---------------|--------------|
+| Nap           | 2            |
+| Oversleeping  | 22           |
+- oversleeping:  22 users  more than 9 hours(9hr = 540 min).
+- Nap: 2 users Sleeping less than 3.5 hours.
+- 
