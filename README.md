@@ -377,4 +377,22 @@ print(result)
 | Oversleeping  | 22           |
 - oversleeping:  22 users  more than 9 hours(9hr = 540 min).
 - Nap: 2 users Sleeping less than 3.5 hours.
-- 
+
+## Total steps 
+```{r}
+ggplot(data = hourlySteps_merged) +
+  geom_bar(mapping = aes(x = ActivityHour, y = StepTotal, fill = ActivityHour), stat = "identity") +
+  labs(title = "active user Hourly Steps",caption= "analyze and visualize by Numan khan")
+
+
+```
+![000016](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/5ec47083-c4f9-4dce-b825-78409b416246)
+- The bar graph illustrates how the  user is active in an hourly manner.
+- Between 16:00 to 20:00 Time the user is very active 
+## Steps vs. Active minutes 
+![Steps vs active_minutes](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/2ac7c62a-3978-4002-b288-db9bd5ebe531)
+
+- Comparing the four active levels to the Total steps (the sedentary, lightly_active, fairly active and very active )
+- From the plot we can see that the concentration is mainly on the steps between 5000 to 15000.
+- Where the users spend of the time on sedentary 8 t0 13. 5 hours in lightly active, and 1 to 2 hours for fairly and very active.
+
