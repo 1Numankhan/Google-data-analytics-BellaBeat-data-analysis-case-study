@@ -397,7 +397,7 @@ ggplot(data = hourlySteps_merged) +
 - From the plot we can see that the concentration is mainly on the steps between 5000 to 15000.
 - Where the users spend of the time on sedentary 8 t0 13. 5 hours in lightly active, and 1 to 2 hours for fairly and very active.
 
-# **ANALYZE**
+# **SHARE**
 The more you are active the more calories will be burned. There is an interesting finding  The scatterplot illustrates that both in sedentary minutes and active
 minutes the users burned almost the same calories.
 ![step_VS_calories](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/0419eecc-0590-4432-8ecf-3649ac3a2dd8)
