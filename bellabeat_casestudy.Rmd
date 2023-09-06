@@ -1,0 +1,243 @@
+---
+title: "casestudy_bellabeat"
+output:
+  html_document: default
+  pdf_document: default
+date: "2023-08-27"
+---
+```{r}
+install.packages('tidyverse')
+install.packages('ggplot2')
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+```{r}
+head(dailyActivity_merged)
+colnames(dailyActivity_merged)
+ summary(dailyActivity_merged)
+
+```
+**summary of dailyActivity**
+
+```{r}
+dailyactivity <- dailyActivity_merged
+dailyactivity %>%  
+  select(TotalSteps,
+         TotalDistance,
+         SedentaryMinutes, Calories) %>%
+  summary()
+```
+Activity
+```{r}
+dailyactivity %>%
+  select(VeryActiveMinutes, FairlyActiveMinutes, LightlyActiveMinutes) %>%
+  summary()
+```
+
+```{r}
+# Load the necessary packages
+library(dplyr)
+library(magrittr)
+
+
+# Assuming hourlyCalories_merged is your data frame
+hourlycalories <- hourlyCalories_merged
+
+# Perform data manipulation and summarization using %<>%
+hourlycalories %<>%
+  select(Calories) %>%
+  summary()
+
+# Print the summarized data
+print(hourlycalories)
+
+```
+summary of the sleepday
+```{r}
+sleepDay_merged%>%
+  select(TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed) %>%
+  summary()
+```
+```{r}
+weight <- weightLogInfo_merged_version_1_
+weight %>%
+  select(WeightKg, BMI) %>%
+  summary()
+```
+**hourlyintensities**
+```{r}
+colnames(hourlyIntensities_merged)
+```
+## Average steps, distance and Calories burn in a in a day 
+```{r}
+install.packages("dplyr")
+library(dplyr)
+```
+```{r}
+# Load necessary libraries
+library(dplyr)
+
+# Load the dataset using the correct file path
+dailyActivity_merged <- read.csv("/cloud/project/dailyActivity_merged.csv")
+
+# Calculate the average steps, distance, and calories burned per day
+average_summary <- dailyActivity_merged %>%
+  summarize(
+    AVGsteps = mean(TotalSteps),
+    AVGdistance = mean(TotalDistance),
+    AvgCalories = mean(Calories)
+  )
+
+# Assign the modified dataset back to the same variable
+dailyActivity_merged <- average_summary
+
+# Print the summary
+print(average_summary)
+
+```
+## user and their average sleep
+```{r}
+data <- read.csv("/cloud/project/sleepDay_merged.csv")
+
+data <- data %>%
+  group_by(Id) %>%
+  summarise(
+    no_sleep_days = n_distinct(Id),
+    daily_sleep_min = sum(TotalMinutesAsleep)
+  ) %>%
+  mutate(
+    avg_sleep_min = round(daily_sleep_min / no_sleep_days, 2),
+    sleep_type = case_when(
+      avg_sleep_min >= 540 ~ "Oversleeping",
+      avg_sleep_min >= 420 ~ "Healthy Sleep",
+      avg_sleep_min >= 210 ~ "Unhealthy Sleep",
+      TRUE ~ "Nap"
+    )
+  )
+
+result <- data %>%
+  group_by(sleep_type) %>%
+  summarise(
+    no_of_users = n()
+  )
+
+print(result)
+```
+
+# hourly  steps
+in which hours The user take the most steps 
+```{r}
+ggplot(data = hourlySteps_merged) +
+  geom_bar(mapping = aes(x = ActivityHour, y = StepTotal, fill = ActivityHour), stat = "identity") +
+  labs(title = "active user Hourly Steps",caption= "analyze and visualize by Numan khan")
+
+
+```
+## Merging the dataset dailyactivity and hourlysteps
+```{r}
+merged_date <- merge(sleepDay_merged, dailyActivity_merged, by = c('Id', 'Activitydate'))
+
+```
+## Total step vs Calories
+```{r}
+library(ggplot2)
+
+ggplot(data = dailyActivity_merged) +
+  geom_point(mapping = aes(x = TotalSteps, y = Calories, color = SedentaryMinutes)) +
+  scale_color_gradient(low = "steelblue", high = "orange") +
+  geom_smooth(mapping = aes(x = TotalSteps, y = Calories), method = "lm", se = FALSE)+labs(title ="Totalsteps vs Calories",caption = "presented by Numan khan")
+
+
+```
+so step is directly proportional to calories burn in a day. the more steps you take the more you burn the calories. I will add a smooth for calrity.The more active that you're, the more steps you take, and the more calories you will burn. This is an obvious fact, but we can still look into the data to find any interesting. Here we see that some users who are sedentary, take minimal steps, but still able to burn over 1500 to 2500 calories compare to users who are more active, take more steps, but still burn similar calories.
+## Totalsteps vs ACtive minutes
+```{r}
+library(ggplot2)
+
+# Assuming you have a data frame called DailyActivity_merged
+
+# Create a scatterplot with different colors for SedentaryMinutes
+ggplot(data = dailyActivity_merged, aes(x = TotalSteps, y = VeryActiveMinutes, color = SedentaryMinutes)) +
+  geom_point() +
+  geom_point(aes(x = TotalSteps, y = LightlyActiveMinutes, color = SedentaryMinutes)) +
+  geom_point(aes(x = TotalSteps, y = FairlyActiveMinutes, color = SedentaryMinutes)) +
+  geom_point(aes(x = TotalSteps, y = SedentaryMinutes, color = SedentaryMinutes)) +
+  
+  # Customize color scale
+  scale_color_gradient(low = "blue", high = "red") +
+  
+  # Labels and title
+  labs(
+    x = "Total Steps",
+    y = "Active Minutes",
+    color = "Sedentary Minutes"
+  ) +
+  
+  # Add a legend
+  guides(color = guide_legend(title = "Sedentary Minutes")) +
+  
+  # Add a title
+  ggtitle(" Total Steps vs Active Minutes by Sedentary Minutes")
+
+
+
+```
+
+```{r}
+colnames(dailyActivity_merged)
+```
+## Total minute asleep vs Time in bed
+```{r}
+library(ggplot2)
+
+
+
+ggplot(data = sleepDay_merged) + 
+  geom_point(mapping = aes(x = TotalMinutesAsleep, y = TotalTimeInBed,color=TotalTimeInBed)) + 
+  labs(title = "Total time asleep vs Total time in bed")
+
+```
+```{r}
+# Merge the two datasets based on common columns "Id" and "Date"
+merged_data <- merge(sleepDay_merged, dailyactivity_merged, by = c("Id", "Date"))
+
+# View the merged dataset
+View(merged_data)
+
+```
+
+
+
+```{r}
+# Assuming 'SleepDay' is the name of the column you want to change
+names(sleepDay_merged)[names(sleepDay_merged) == "SleepDay"] <- "Date"
+
+head(sleepDay_merged) 
+
+```
+
+## Now change the name of the activityHour to date
+```{r}
+names(dailyActivity_merged)[names(dailyActivity_merged)=="ActivityDate"] <-"Date"
+View(dailyActivity_merged)
+```
+```{r}
+daily_activity <- dailyActivity_mer %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
+```
+```{r}
+library(ggplot2)
+
+ggplot(data = Sleepday_merged) +
+  geom_bar(mapping = aes(x = SleepDay, y = TotalMinutesAsleep, fill = TotalMinutesAsleep), stat = "identity") +
+  labs(x = "Sleep Day", y = "Total Minutes Asleep") +
+  scale_fill_gradient(low = "blue", high = "red")  # Adjust colors as needed
+
+```
+ 
+
+
+
