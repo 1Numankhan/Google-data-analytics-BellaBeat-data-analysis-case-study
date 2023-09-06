@@ -377,7 +377,7 @@ print(result)
 | Oversleeping  | 22           |
 - oversleeping:  22 users  more than 9 hours(9hr = 540 min).
 - Nap: 2 users Sleeping less than 3.5 hours.
-
+# **SHARE**
 ## Total steps 
 ```{r}
 ggplot(data = hourlySteps_merged) +
@@ -397,13 +397,28 @@ ggplot(data = hourlySteps_merged) +
 - From the plot we can see that the concentration is mainly on the steps between 5000 to 15000.
 - Where the users spend of the time on sedentary 8 t0 13. 5 hours in lightly active, and 1 to 2 hours for fairly and very active.
 
-# **SHARE**
+
 The more you are active the more calories will be burned. There is an interesting finding  The scatterplot illustrates that both in sedentary minutes and active
 minutes the users burned almost the same calories.
 ![step_VS_calories](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/0419eecc-0590-4432-8ecf-3649ac3a2dd8)
 
-##  Total minute asleep vs Time in bed
+##  Total minute asleep vs. Time in bed
 
-![## Total minute asleep vs Time in bed](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/8b952a5f-583a-48a6-85fd-a45a459e956a)
-- If you look to the graph there is no proper correlation Between **Total minute asleep vs Time in bed**
-- To improve the user sleep to give more time to sleep Bellabeat need to notify there users.
+![## Total minute asleep vs. Time in bed](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/8b952a5f-583a-48a6-85fd-a45a459e956a)
+- If you look at the graph there is no proper correlation Between **Total minute asleep vs. Time in bed**
+- To improve the user sleep to give more time to sleep Bellabeat need to notify their users.
+- 
+## SleepTypes Distribution
+
+![download](https://github.com/1Numankhan/Google-data-analytics-BellaBeat-data-analysis-case-study/assets/138983077/b65c6f17-4720-462c-ab57-aed1b8f83238)
+
+# **ACT**
+**Conclusion based on Analysis**
+1. Users take an average of 7637.911 which is lower than the required Goal  which is 8000 daily steps. Bellabeat marketing team Should suggest to their users To take a minimum of 8,000 steps and explain the Benefits.
+2. 39.1 % of participants are in Oversleeping  Categories  Bellabeat should come up with New ideas to make its device Better to help the participants Avoid oversleeping and explain its Demerit. It is due to the fact that oversleeping make Bellabeat user Lazy.
+3. Bellabeat should improve the **Notification features** to inform the users as 81% of users spend their active time in sedentary minutes. Bellabeat should inform them through Notification to reduce sedentary minutes  and avoid oversleeping.
+4. The marketing team should come up with the **Reward System** To motivate them to achieve their daily, Weekly, and monthly.
+
+## All Learning Resources 
+- As this is my First Capstone Project  from the [Google data analytics Certification](https://www.coursera.org/learn/google-data-analytics) I would like to show my Gratitude to all the Google instructors for this amazing Course and the compact and concise Case study.
+- I would to thanks [Kaggle ](https://www.kaggle.com/) and [Github](https://github.com/)
