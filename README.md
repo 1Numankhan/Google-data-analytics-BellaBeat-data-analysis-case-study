@@ -417,7 +417,7 @@ minutes the users burned almost the same calories.
 1. Users take an average of 7637.911 which is lower than the required Goal  which is 8000 daily steps. Bellabeat marketing team Should suggest to their users To take a minimum of 8,000 steps and explain the Benefits.
 2. 39.1 % of participants are in Oversleeping  Categories  Bellabeat should come up with New ideas to make its device Better to help the participants Avoid oversleeping and explain its Demerit. It is due to the fact that oversleeping make Bellabeat user Lazy.
 3. Bellabeat should improve the **Notification features** to inform the users as 81% of users spend their active time in sedentary minutes. Bellabeat should inform them through Notification to reduce sedentary minutes  and avoid oversleeping.
-4. The marketing team should come up with the **Reward System** To motivate them to achieve their daily, Weekly, and monthly.
+4. The marketing team should come up with the **Reward System** To motivate them to achieve their daily, Weekly, and monthly Goals.
 
 ## All Learning Resources 
 - As this is my First Capstone Project  from the [Google data analytics Certification](https://www.coursera.org/learn/google-data-analytics) I would like to show my Gratitude to all the Google instructors for this amazing Course and the compact and concise Case study.
