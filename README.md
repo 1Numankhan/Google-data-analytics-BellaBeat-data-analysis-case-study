@@ -421,4 +421,4 @@ minutes the users burned almost the same calories.
 
 ## All Learning Resources 
 - As this is my First Capstone Project  from the [Google data analytics Certification](https://www.coursera.org/learn/google-data-analytics) I would like to show my Gratitude to all the Google instructors for this amazing Course and the compact and concise Case study.
-- I would to thanks [Kaggle ](https://www.kaggle.com/) and [Github](https://github.com/)
+- I would like  to thanks [Kaggle ](https://www.kaggle.com/) and [Github](https://github.com/)
